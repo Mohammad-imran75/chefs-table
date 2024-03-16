@@ -3,18 +3,18 @@
 const Banner = () => {
     return (
         <div>
-                   <div>
+          <div>
             <div>
             <div className="navbar bg-base-100">
   <div className="flex-1">
     <a className="btn btn-ghost text-3xl font-bold">Recipe Calories</a>
   </div>
     <div>
-        <ul className='flex gap-4 lg: mr-[200px] items-center'>
-            <li>Home</li>
+    <ul className='flex gap-4 lg: mr-[200px] items-center'>
+    <li>Home</li>
             <li>Recipes</li>
             <li>About</li>
-            <li>Search</li>
+            <li>Search</li>  
         </ul>
     </div>
   <div className="flex-none gap-2">
@@ -28,14 +28,7 @@ const Banner = () => {
         </div>
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+      
       </ul>
     </div>
   </div>
@@ -59,7 +52,12 @@ const Banner = () => {
 </div>
 </div>
 </div>
-        </div>
+<div className=" flex items-center flex-col space-y-4 mb-10">
+        <h1 className="text-3xl font-bold">Our Recipe</h1>
+        <p>Discover the secret to mouthwatering flavors with our signature recipe, exclusively available at our shop.</p>
+  </div>
+</div>
+
     );
 };
 
