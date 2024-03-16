@@ -5,7 +5,7 @@ const WantToCooks = ({wantToCooks,handlePrepared}) => {
 
 
     return (
-        <div  className='w-1/3 items-center bg-pink-200 space-y-3'>
+        <div  className='lg:w-1/3 items-center bg-pink-200 space-y-3'>
             <h1 className='font-semibold text-2xl p-4 '>Want To Cook :{wantToCooks.length}</h1>
             <div className="overflow-x-auto">
             <div className="overflow-x-auto">

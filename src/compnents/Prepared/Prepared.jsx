@@ -1,13 +1,14 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const Prepared = () => {
-    return (
-        <div>
+// const Prepared = ({prepared}) => {
+//     console.log('clicked',prepared)
+//     return (
+//         <div>
             
-        </div>
-    );
-};
-Prepared.propTypes ={
-    Prepared:PropTypes.object
-}
-export default Prepared;
+//         </div>
+//     );
+// };
+// Prepared.propTypes ={
+//     prepared:PropTypes.object
+// }
+// export default Prepared;

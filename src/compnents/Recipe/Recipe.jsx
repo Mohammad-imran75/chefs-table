@@ -1,5 +1,6 @@
-
+import { CiTimer } from "react-icons/ci";
 import PropTypes from 'prop-types';
+import { FaFire } from "react-icons/fa";
 
 
 const Recipe = ({recipe,handleWantToClick}) => {
@@ -7,6 +8,7 @@ const Recipe = ({recipe,handleWantToClick}) => {
     // console.log(recipe);
     
     return (
+       
         <div className='card-container  p-5 bg-[#28282833]'>
         <div className="card card-compact shadow-xl">
 <figure><img src={image} alt="Shoes" /></figure>
@@ -20,8 +22,8 @@ const Recipe = ({recipe,handleWantToClick}) => {
  })
 }
 <div className='flex justify-between '>
-    <p>{preparing_time}</p>
-    <p>{calories} Calories</p>
+    <p className="flex items-center gap-2"><CiTimer />{preparing_time}</p>
+    <p className="flex items-center gap-2"><FaFire />{calories} Calories</p>
 </div>
 <div className="card-actions ">
 <button onClick={()=>handleWantToClick(recipe)}
@@ -35,7 +37,7 @@ const Recipe = ({recipe,handleWantToClick}) => {
 };
 Recipe.propTypes ={
     recipe:PropTypes.object,
-    handleWantToClick:PropTypes.func,
-    
+    handleWantToClick:PropTypes.func
+   
 }
 export default Recipe;
