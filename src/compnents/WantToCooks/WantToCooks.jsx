@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import WanToCook from './WanToCook/WanToCook';
-
-const WantToCooks = ({wantToCooks,handlePrepared}) => {
+import Prepareds from '../Prepareds/Prepareds';
+const WantToCooks = ({wantToCooks,handlePrepared,prepareds}) => {
 
 
     return (
@@ -26,16 +26,23 @@ const WantToCooks = ({wantToCooks,handlePrepared}) => {
               wantToCooks.map((wantToCook,idx) =>
                 <WanToCook key={idx} 
                 index={idx} wantToCook={wantToCook}
-                handlePrepared={handlePrepared}>
+                handlePrepared={handlePrepared}
+                prepareds={prepareds}
+                
+              >
               </WanToCook>
               )
             }
-            
+             {
+        <Prepareds prepareds={prepareds}
+        ></Prepareds>
+       }
     </div>
     );
 };
 WantToCooks.propTypes ={
     wantToCooks:PropTypes.object,
-    handlePrepared:PropTypes.func
+    handlePrepared:PropTypes.func,
+    prepareds:PropTypes.object
 }
 export default WantToCooks;

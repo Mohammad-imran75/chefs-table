@@ -12,8 +12,8 @@ function App() {
   const notify = () => toast("You Already Clicked!");
   const [recipes,setRecipes] = useState([]);
   const [wantToCooks , setWantToCooks] = useState([]);
-  const [time,setTime] =useState(0);
-  const [calories,setCalories] = useState(0);
+  const [prepareds ,setPrpareds] =useState([]);
+  console.log(prepareds);
   useEffect(()=>{
     fetch('recipe.json')
     .then(res => res.json())
@@ -31,11 +31,15 @@ function App() {
   //  const newWantToCook = [...wantToCooks,recipe];
   // setWantToCooks(newWantToCook);
    }
-   const handlePrepared = item =>{
-    console.log('this button clicked')
+   const handlePrepared = (item) =>{
+   const newPrepareds = [...prepareds,item]
+  setPrpareds(newPrepareds);
+  const remaining = wantToCooks.filter(i => i.id !==item.id)
+  setWantToCooks(remaining);
    }
   
 
+   console.log(prepareds)
   return (
     <>
       
@@ -43,12 +47,19 @@ function App() {
       <div className=''>
       <Banner></Banner>
       <div className="flex justify-between gap-5">
+   
       <Recipes 
    recipes={recipes}
-   handleWantToClick={handleWantToClick}>
-     </Recipes>
+   handleWantToClick={handleWantToClick}
+   
+   >
+   </Recipes>
+   
+    
     <WantToCooks wantToCooks={wantToCooks}
-    handlePrepared={handlePrepared}></WantToCooks>
+    handlePrepared={handlePrepared}
+    prepareds = {prepareds}
+    ></WantToCooks>
     </div>
    </div>
       

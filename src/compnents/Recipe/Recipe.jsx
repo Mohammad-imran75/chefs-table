@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FaFire } from "react-icons/fa";
 
 
-const Recipe = ({recipe,handleWantToClick}) => {
+const Recipe = ({recipe,handleWantToClick,caloriess,preparingTime}) => {
     const {image,name,short_description,ingredients,calories,preparing_time} = recipe;
     // console.log(recipe);
     
